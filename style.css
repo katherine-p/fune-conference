@@ -1,0 +1,101 @@
+.tabbar{
+	background-color: #f7faa0;
+}
+*
+{
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	min-height: 100%;	
+}
+body{
+	background-color: #ccfa83;
+}
+
+#local-container video {
+	border: 4px solid #396b98;
+	border-radius: 10px;
+	height: 100%;
+}
+
+.remotecont video {
+	height: 100%;
+}
+
+#local-screensharing video {
+	width: 100%;
+	height: 100%;
+}
+
+/*.container{
+	min-height: 100%;
+	padding-bottom: 10px;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;}*/
+
+
+#footer {
+	background-color: #f7faa0;
+	padding: 10px;
+	bottom: 0;
+	width: 100%;
+	position: fixed;
+}
+
+
+.center{
+	position: absolute; /* taken out of the normal flow of the document */
+	top: 50%; /* moved down by 50% of the screen height */
+	transform: translateY(-50%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+	width: 100%; /* needs to be defined to keep the default block behavior */
+	text-align: center;
+	margin: 0; /* again, for perfect center */
+}
+
+#conference{
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;
+	
+}
+
+/* Camera */
+#conference div {
+	position: relative;
+	vertical-align: middle;
+	align-self: center;
+	border-radius: 10px;
+	overflow: hidden;
+	display: inline;
+	animation: show 0.4s ease;
+}
+
+/* Animation */
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: scale(0.4) translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+.userLabel{
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+}
+

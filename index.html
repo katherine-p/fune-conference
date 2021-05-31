@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	<!-- Core -->
+	<!-- <link rel="stylesheet" href="core/styles.css"> -->
+	<script src="core/script.js"></script>
+
+	<link rel="icon" type="image/png" href="assets/icon/icon.png" />
+	<title>FUNE - Video Conferencing for Kids</title>
+</head>
+<body>
+	<nav class="navbar navbar-light tabbar justify-content-center">
+		<a class="navbar-brand" href="#">Kelas TK-A</a>
+	</nav>
+	<div class="container" id="leaving" style="display: none;">
+		<div class="row">
+			<div class="col center">
+				<h1>See you later! :)</h1>
+				<button class="btn btn-outline-info" onclick="window.location.href='http://localhost:8100/home'">Back to home</button>
+			</div>
+		</div>
+	</div>
+	<div id="conference">
+		<div class="Camera" id="local-container"></div>		
+	</div>
+	<div id="chat" style="display: none;">
+		<h3>Chat</h3>
+		<div id="chat-body">
+			<ul id="message-list"></ul>
+			<ul id="active-users">
+				<li><b>Active users</b></li>
+			</ul>
+		</div>
+		<div id="chat-footer">
+			<input id="typing-area" placeholder="Type a message!" type="text" />
+			<button id="send-message">Send</button>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="row text-center">
+			<div class="col">
+				<button class="btn btn-outline-dark" onclick="turnmic()" value="on" id="btnmic"><i class="fas fa-microphone fa-3x"></i></button>
+			</div>
+			<div class="col">
+				<button class="btn btn-danger" onclick="leaveConference()"><i class="fas fa-phone-slash fa-3x"></i></button>
+			</div>
+			<div class="col">
+				<button class="btn btn-outline-dark" onclick="turnvideo()" value="on" id="btnvideo"><i class="fas fa-video fa-3x"></i></button>
+			</div>
+			<div class="col">
+				<button class="btn btn-outline-dark" onclick="toogleScreenSharing()" value="on" id='toggle-screensharing'><i class="fas fa-desktop fa-3x"></i></button>
+			</div>
+			<div class="col">
+				<button class="btn btn-outline-info" onclick="turnvideo()" value="on" id="btnvideo"><i class="fas fa-gamepad fa-3x"></i></button>
+			</div>
+			<div class="col">
+				<button class="btn btn-outline-warning" value="on" id="btnchat"><i class="fas fa-comment-dots fa-3x"></i></button>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cloud.apizee.com/apiRTC/apiRTC-latest.min.js"></script>
+	<script type="text/javascript" src="func.js"></script>
+
+</body>
+</html>
