@@ -29,9 +29,13 @@
 }
 
 .imagequiz{
-  width : 150px;
+  width : 100%;
   height: 15vw;
   object-fit: cover;
+}
+
+.modal-dialog{
+  width: 100%;
 }
 
 .carousel-control-prev{
@@ -47,14 +51,15 @@
 .bar {
   height: 50px; 
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 20px;
+  text-align: right;
   color: white;
 }
 
 .bar-1 {
-   background: #e2670b;
-   animation: bar1 3s ease 1 normal;
-   width: 100%;
+ background: #e2670b;
+ animation: bar1 3s ease 1 normal;
+ width: 100%;
 }
 @keyframes bar1 {
   0% { width: 0px; }
@@ -62,9 +67,9 @@
 }
 
 .bar-2 {
-   background: #b51110;
-   animation: bar2 3s ease 1 normal;
-   width: 60%;
+ background: #b51110;
+ animation: bar2 3s ease 1 normal;
+ width: 60%;
 }
 @keyframes bar2 {
   0% { width: 0px; }
@@ -72,9 +77,9 @@
 }
 
 .bar-3 {
-   background: #2a369c;
-   animation: bar3 3s ease 1 normal;
-   width: 40%;
+ background: #2a369c;
+ animation: bar3 3s ease 1 normal;
+ width: 40%;
 }
 @keyframes bar3 {
   0% { width: 0px; }
@@ -89,33 +94,4 @@
 @keyframes bar4 {
   0% { width: 0px; }
   100% { width: 100%; }
-}*/
-
-
-/*@media only screen and (max-width: 800px) {
-
-  .modal-content{
-    background-color: #f7faa0;
-    width: 30rem;
-  }
-
-
-  .imagequiz{
-    width : 110;
-    height : 110;
-  }
-
-  .card{
-    background-color: #ccfa83;
-    width: 10rem;
-
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .modal-content{
-    background-color: #f7faa0;
-    width: 30rem;
-  }
-
-}*/
+  }*/

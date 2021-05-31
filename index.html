@@ -45,7 +45,7 @@
 	<div id="conference">
 		<div class="Camera" id="local-container"></div>		
 	</div>
-	<!-- <div id="chat" style="float: right;">
+	<div id="chat" style="display: none;">
 		<h3>Chat</h3>
 		<div id="chat-body">
 			<ul id="message-list"></ul>
@@ -54,10 +54,10 @@
 			</ul>
 		</div>
 		<div id="chat-footer">
-			<input id="typing-area" placeholder="Type a message!" type="text" />
-			<button id="send-message">Send</button>
+			<input class="form-control" id="typing-area" placeholder="Type a message!" type="text" />
+			<button class="btn btn-dark" id="send-message">Send</button>
 		</div>
-	</div> -->
+	</div>
 	<div id="footer">
 		<div class="row text-center">
 			<div class="col">
@@ -73,7 +73,7 @@
 				<button class="btn btn-outline-dark" onclick="toogleScreenSharing()" value="on" id='toggle-screensharing'><i class="fas fa-desktop fa-3x"></i></button>
 			</div>
 			<div class="col">
-				<button class="btn btn-outline-info" id="btnquiz" onclick="modalQuiz()" data-toggle="modal" data-target="#quizgame"><i class="fas fa-gamepad fa-3x"></i></button>
+				<button class="btn btn-outline-info" id="btnquiz" data-toggle="modal" data-target="#quizgame"><i class="fas fa-gamepad fa-3x"></i></button>
 			</div>
 			<div class="col">
 				<button class="btn btn-outline-warning" value="on" id="btnchat"><i class="fas fa-comment-dots fa-3x"></i></button>
@@ -98,7 +98,7 @@
 								<div class="container">
 									<div class="row"  style="padding-left: 10px;">
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(1,1)">
+											<div class="card" id="s1-1" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal1gambar1.jpg" alt="Ayam"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -107,7 +107,7 @@
 											</div>
 										</div>
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(2,1)">
+											<div class="card" id="s1-2" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal1gambar2.jpg" alt="Zebra"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -119,7 +119,7 @@
 									<br><br>
 									<div class="row">
 										<div class="col-sm-6 col-md-6">
-											<div class="card" onclick="clickAnswer(3,1)">
+											<div class="card" id="s1-3" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal1gambar3.jpg" alt="Jerapah"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -128,7 +128,7 @@
 											</div>
 										</div>
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(4,1)">
+											<div class="card" id="s1-4" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal1gambar4.jpg" alt="Gajah"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -145,7 +145,7 @@
 								<div class="container">
 									<div class="row">
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(1,2)">
+											<div class="card" id="s2-1" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal2gambar1.png" alt="Apel" width="200" height="200"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -154,7 +154,7 @@
 											</div>
 										</div>
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(2,2)">
+											<div class="card" id="s2-2" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal2gambar2.png" alt="Anggur" width="200" height="200"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -166,7 +166,7 @@
 									<br><br>
 									<div class="row">
 										<div class="col-sm-6 col-md-6">
-											<div class="card" onclick="clickAnswer(3,2)">
+											<div class="card" id="s2-3" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal2gambar3.jpg" alt="Nanas" width="200" height="200"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -175,7 +175,7 @@
 											</div>
 										</div>
 										<div class="col-sm-6 col-md-6">
-											<div class="card"  onclick="clickAnswer(4,2)">
+											<div class="card" id="s2-4" onclick="clickAnswer(this.id)">
 												<h1 style="text-align: center;"><img class="imagequiz" src="assets/quizimg/soal2gambar4.jpg" alt="Pisang" width="200" height="200"></h1>
 												<!--<img class="card-img-top" src="img/soal1gambar1.jpg" alt="Ayam" width="200" height="200">-->
 												<div class="card-body">
@@ -226,12 +226,12 @@
 				</div>
 				<div class="modal-body">
 					<div class="graph">
-						<h5><b>#1 Budi</b></h5>
-						<div class="bar bar-1"></div>
-						<h5><b>#2 Badi</b></h5>	
-						<div class="bar bar-2"></div>
-						<h5><b>#3 Budu</b></h5>	
-						<div class="bar bar-3"></div>	
+						<h5><b>#1 Feronica</b></h5>
+						<div class="bar bar-1">2</div>
+						<h5><b>#2 Budi</b></h5>	
+						<div class="bar bar-2">1</div>
+						<h5><b>#3 Katherine</b></h5>	
+						<div class="bar bar-3">0</div>	
 					</div>					
 				</div>
 				<div class="modal-footer">
@@ -241,29 +241,6 @@
 		</div>
 	</div>
 
-	<!-- Modal Result Next Slide -->
-	<div class="modal fade" id="resultquiz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog dialog-res">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Result</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="graph">
-						<div class="bar">Budi</div>	
-						<div class="bar">Badi</div>	
-						<div class="bar">Budu</div>	
-					</div>					
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-outline-danger" onclick="nextresult()" data-dismiss="modal">Next</button>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- Scripts -->
 	<script type="text/javascript" src="https://cloud.apizee.com/apiRTC/apiRTC-latest.min.js"></script>
 	<script type="text/javascript" src="func.js"></script>

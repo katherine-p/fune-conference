@@ -93,24 +93,19 @@ body{
 	}
 }
 
-.userLabel{
-	position: absolute;
-	bottom: 5px;
-	right: 10px;
-}
 
-/*#chat {
-  display: none;
-  width: 600px;
+#chat {
+  width: 400px;
   margin: 0 auto;
+  margin-right: 10px;
 }
 #chat #chat-body {
   height: 200px;
   display: flex;
   text-align: left;
-  font-family: Roboto;
-  font-size: 13px;
+  font-size: 20px;
   width: 100%;
+  background: #f4e5d8;
 }
 #chat #chat-body #message-list {
   list-style-type: none;
@@ -118,7 +113,7 @@ body{
   padding-left: 15px;
   margin: auto;
   height: 100%;
-  background: #dddddd;
+  background: #f4e5d8;
   overflow-y: auto;
 }
 #chat #chat-body #active-users {
@@ -127,7 +122,7 @@ body{
   padding-left: 5px;
   margin: auto;
   height: 100%;
-  background: #bbbbbb;
+  background: #D55387;
 }
 #chat #chat-footer {
   width: 100%;
@@ -138,5 +133,5 @@ body{
 }
 #chat #chat-footer #send-message {
   flex-basis: 20%;
-}*/
+}
 

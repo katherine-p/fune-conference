@@ -46,20 +46,54 @@ function getQuizAnswer(){
   });
 }
 
-window.onload = function(){
-  alert('masuk');
+// window.onload = function(){
+//   //alert('masuk');
 
-  getStatus();
-  getQuizAnswer();
-}
+//   getStatus();
+//   getQuizAnswer();
+// }
 
-function modalQuiz(){
-  alert('status: '+statusQuiz);
-}
+window.addEventListener("load", function(){
+    var database = firebase.database().ref('event');
+    database.on('value', function(snapshot) { 
+      var stat = snapshot.val().status;
+      //alert(stat);
+      if(stat==1)
+      {
+        $("#quizgame").modal('show');
+      }
+      else{
+        $("#quizgame").modal('hide');
+      }
+      //alert('status: '+statusQuiz);
+    });
+    
+});
 
-function clickAnswer(num, qnum){
+function clickAnswer(id){
   //alert('clicked answer: ' + num);
-  cekAnswer(num, qnum);
+  //cekAnswer(num, qnum);
+  var soal = id.substring(0,2);
+  //alert(soal);
+  if(soal=='s1')
+  {
+    for (var i = 1; i <= 4; i++) 
+    {
+      var a = 's1-'+i;
+      document.getElementById(a).style.border = 'none';
+    }
+    document.getElementById(id).style.border = '2px solid blue';
+  }
+  else
+  {
+    for (var i = 1; i <= 4; i++) 
+    {
+      var a = 's2-'+i;
+      document.getElementById(a).style.border = 'none';
+    }
+    document.getElementById(id).style.border = '2px solid blue';
+  }
+    
 }
 
 function cekAnswer(num, questionNum){
