@@ -84,6 +84,23 @@ function joinConference(name) {
         stream.removeFromDiv('remote-container-'+stream.streamId, 'remote-media-' + stream.streamId);
     });
 
+    // connectedConversation.on('contactJoined', (contact) => {
+    //     console.log('Contact that has joined :', contact);
+    //     renderUserList();
+    // }).on('contactLeft', (contact) => {
+    //     console.log('Contact that has left :', contact);
+    //     renderUserList();
+    // });
+
+    // //=====================================================
+    // // 4 BIS/ ADD EVENT LISTENER : CHAT MESSAGE 
+    // //=====================================================
+    // connectedConversation.on('message', (msg) => {
+    //     console.log('Chat message :', msg);
+    //     // Add chat message
+    //     $('#message-list').append('<li><b>' + msg.sender.getId() + '</b> : ' + msg.content + '</li>');
+    // });
+
     //==============================
     // 5/ CREATE LOCAL STREAM
     //==============================
@@ -115,6 +132,8 @@ function joinConference(name) {
             // 7/ PUBLISH OWN STREAM
             //==============================
             connectedConversation.publish(localStream);
+            //renderUserList();
+            //updateUIState('conference');
         }).catch(function(err) {
             console.error('Conversation join error', err);
         });
@@ -240,11 +259,11 @@ function toogleScreenSharing()
                     Dish();
 
 
-                    alert('udh ke append');
+                    //alert('udh ke append');
 
                     // Attach stream
                     screensharingStream.attachToElement(mediaElement);
-                    alert('udh attachhh');
+                    //alert('udh attachhh');
 
                 })
         .catch(function(err) {
@@ -277,6 +296,7 @@ function renderUserList() {
     $('#active-users').append('<li><b>Active users</b></li>');
     let keys = Object.keys(contacts);
     $('#active-users').append('<li><b>Me:</b> ' + connectedSession.getId() + '</li>');
+    //alert(connectedSession.getId());
     for (let i = 0; i < keys.length; i++) {
         $('#active-users').append('<li>' + contacts[keys[i]].getId() + '</li>');
     }

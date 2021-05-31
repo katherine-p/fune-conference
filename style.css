@@ -99,3 +99,44 @@ body{
 	right: 10px;
 }
 
+/*#chat {
+  display: none;
+  width: 600px;
+  margin: 0 auto;
+}
+#chat #chat-body {
+  height: 200px;
+  display: flex;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 13px;
+  width: 100%;
+}
+#chat #chat-body #message-list {
+  list-style-type: none;
+  flex-basis: 80%;
+  padding-left: 15px;
+  margin: auto;
+  height: 100%;
+  background: #dddddd;
+  overflow-y: auto;
+}
+#chat #chat-body #active-users {
+  list-style-type: none;
+  flex-basis: 20%;
+  padding-left: 5px;
+  margin: auto;
+  height: 100%;
+  background: #bbbbbb;
+}
+#chat #chat-footer {
+  width: 100%;
+  display: flex;
+}
+#chat #chat-footer #typing-area {
+  flex-basis: 80%;
+}
+#chat #chat-footer #send-message {
+  flex-basis: 20%;
+}*/
+
